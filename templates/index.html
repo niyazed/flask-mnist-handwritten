@@ -9,8 +9,8 @@
   <title>MNIST Handwritten Digit recognition using CNN</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}" />
 
@@ -18,16 +18,16 @@
 
 <body>
   <div class="container">
-    <div class="header clearfix">
-      <h3 class="text-muted">MNIST Handwritten Digit Recognition</h3>
-    </div>
-    <div class="jumbotron">
-      <h3 class="jumbotronHeading">Draw the digit inside this Box </h3>
-
+    <div>
+      <span class="badge badge-info">MNIST</span>
+      <h1 class="centered">Draw the digit inside this Box  </h1>
+      <br>
+      <br>
+      <br>
       <div class="canvasDiv">
-        <canvas id="canvas" width="280" height="280" style="padding-bottom: 20px">
+        <canvas id="canvas" width="300" height="300">
         </canvas>
-        <br />
+        <br/>
         <p style="text-align:center;">
           <a class="btn btn-success myButton" href="#" role="button">Predict</a>
           <a class="btn btn-primary" href="#" id="clearButton" role="button">Clear</a>
@@ -35,8 +35,9 @@
       </div>
     </div>
 
-    <div class="jumbotron">
-      <p id="result">Get your prediction here!</p>
+    <br>
+    <div class="alert alert-info centered" role="alert">
+      <h5 id="result">Get your prediction here!</h5>
     </div>
 
     <footer class="footer">

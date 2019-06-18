@@ -1,7 +1,22 @@
+
 body {
 padding-top: 20px;
 padding-bottom: 20px;
 }
+
+.centered {
+	position: relative;
+	text-align: center;
+}
+
+#canvas {
+	position: relative;
+	border: 3px solid;
+	margin: auto;
+	cursor: pointer;
+	text-align: center;
+}
+
 
 .header, .footer {
 padding-right: 15px;
@@ -13,10 +28,11 @@ padding-bottom: 20px;
 border-bottom: 1px solid #e5e5e5;
 }
 
-.header h3 {
+.header h1,h3,h5 {
 margin-top: 0;
 margin-bottom: 0;
 line-height: 40px;
+font-family: 'Open Sans', Helvetica;
 }
 
 .footer {
@@ -35,12 +51,12 @@ border-top: 1px solid #e5e5e5;
 margin: 30px 0;
 }
 
-.jumbotron {
+/* .jumbotron {
 text-align: center;
 border-bottom: 1px solid #e5e5e5;
 padding-top: 20px;
 padding-bottom: 20px;
-}
+} */
 
 .bodyDiv{
 text-align: center;
@@ -51,27 +67,17 @@ text-align: center;
 .footer {
     padding-right: 0;
     padding-left: 0;
-}
+	}
 
 .header {
 margin-bottom: 30px;
-}
-
-.jumbotron {
-border-bottom: 0;
-}
+	}
 }
 
 @media screen and (max-width: 500px) {
 .slidecontainer{
     display: none;
-}
-}
-
-
-
-.jumbotronHeading{
-margin-bottom: 7vh;
+	}
 }
 
 .canvasDiv{
