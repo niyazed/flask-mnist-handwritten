@@ -23,7 +23,6 @@ y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
 
-# plt.imshow(x_train[0], cmap=’gray’)
 
 
 if K.image_data_format() == 'channels_first':

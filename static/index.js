@@ -5,10 +5,10 @@
   canvas.height = 280;
   var Mouse = { x: 0, y: 0 };
   var lastMouse = { x: 0, y: 0 };
-  context.fillStyle = "black";
+  context.fillStyle = "white";
   context.fillRect(0, 0, canvas.width, canvas.height);
-  context.color = "white";
-  context.lineWidth = 15;
+  context.color = "black";
+  context.lineWidth = 5;
   context.lineJoin = context.lineCap = "round";
 
 clearCanvas();
@@ -49,18 +49,11 @@ function clearCanvas() {
   var clearButton = $("#clearButton");
   clearButton.on("click", function() {
     context.clearRect(0, 0, 280, 280);
-    context.fillStyle = "black";
+    context.fillStyle = "white";
     context.fillRect(0, 0, canvas.width, canvas.height);
 });
 
-/* Slider control */
-var slider = document.getElementById("myRange");
-var output = document.getElementById("sliderValue");
-output.innerHTML = slider.value;
-slider.oninput = function() {
-  output.innerHTML = this.value;
-  context.lineWidth = $(this).val();
-};
+
 
 $("#lineWidth").change(function() {
   context.lineWidth = $(this).val();
