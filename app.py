@@ -1,5 +1,4 @@
-# Import flask which will handle our communication with the frontend
-# Also import few other libraries
+
 from flask import Flask, render_template, request
 from scipy.misc import imread, imresize, imsave
 import numpy as np
@@ -8,7 +7,7 @@ import sys
 import base64
 import os
 
-# Path to our saved model
+# Path to saved model
 sys.path.append(os.path.abspath("./model"))
 
 from load import *
@@ -31,16 +30,15 @@ def index():
 
 @app.route('/predict/', methods=['GET', 'POST'])
 def predict():
-  # Predict method is called when we push the 'Predict' button 
-  # on the webpage. We will feed the user drawn image to the model
-  # perform inference, and return the classification
+  #get the image
   imgData = request.get_data()
+  #convert the image
   convertImage(imgData)
   # read the image into memory
   x = imread('output.png', mode='L')
   # make it the right size
   x = imresize(x, (28, 28))/255
-  #You can save the image (optional) to view later
+  #save the image 
   imsave('final_image.jpg', x)
   x = x.reshape(1, 28, 28, 1)
 
@@ -50,5 +48,4 @@ def predict():
     return str(response[0])
 
 if __name__ == "__main__":
-# run the app locally on the given port
-app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000)
