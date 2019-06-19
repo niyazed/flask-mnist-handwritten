@@ -16,3 +16,4 @@ scipy
 Pillow
 keras
 h5py
+PIL
