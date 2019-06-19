@@ -1,4 +1,4 @@
-# flask-mnist-handwritten
+# Flask | MNIST HD | Keras
 
 ![Screenshot](Screenshot.png)
 ### A Simple MNIST Handwritten Digit recognition app using flask API and Keras.
