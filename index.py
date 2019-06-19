@@ -8,7 +8,7 @@ import base64
 import os
 from keras.models import model_from_json
 import tensorflow as tf
-from load import *
+
 
 
 
