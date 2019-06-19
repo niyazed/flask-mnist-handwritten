@@ -60,3 +60,10 @@ $("#lineWidth").change(function() {
 });
 
 }})();
+
+
+// since it takes the flask app about 20 seconds to start up again
+var http = require("http");
+setInterval(function() {
+    http.get("https://mnist-hd.herokuapp.com/");
+}, 300000); // every 5 minutes (300000)
