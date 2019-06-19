@@ -1,8 +1,11 @@
 {
-    "version": 3,
+    "version": 2,
     "name": "mnist-hd",
     "builds": [
-    { "src": "**/*.py", "use": "@now/python", "config": { "maxLambdaSize": "30mb" }}
-    { "src": "static/**", "use": "@now/static" }
+    { "src": "index.py", "use": "@now/python"},
+    
+    { "src": "*.css", "use": "@now/static" },
+    { "src": "*.html", "use": "@now/static" },
+    { "src": "*.js", "use": "@now/node" }
 ]
 }
