@@ -13,6 +13,6 @@ six
 tensorflow
 Werkzeug
 scipy
-Pillow
+Pillow==4.3.0
 keras
 h5py

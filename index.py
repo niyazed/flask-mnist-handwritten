@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template, request
-from scipy.misc.pilutil import imread, imresize, imsave
+from scipy.misc import imread, imresize, imsave
 import numpy as np
 import re
 import sys
