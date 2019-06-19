@@ -5,9 +5,9 @@
   canvas.height = 280;
   var Mouse = { x: 0, y: 0 };
   var lastMouse = { x: 0, y: 0 };
-  context.fillStyle = "white";
+  context.fillStyle = "black";
   context.fillRect(0, 0, canvas.width, canvas.height);
-  context.color = "black";
+  context.color = "white";
   context.lineWidth = 5;
   context.lineJoin = context.lineCap = "round";
 
@@ -49,7 +49,7 @@ function clearCanvas() {
   var clearButton = $("#clearButton");
   clearButton.on("click", function() {
     context.clearRect(0, 0, 280, 280);
-    context.fillStyle = "white";
+    context.fillStyle = "black";
     context.fillRect(0, 0, canvas.width, canvas.height);
 });
 
