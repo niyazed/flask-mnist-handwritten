@@ -12,7 +12,7 @@ pyparsing
 six
 tensorflow
 Werkzeug
-scipy==1.2.1
+scipy==1.10.0
 Pillow==6.2.0
 keras
 h5py
